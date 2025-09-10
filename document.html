@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdvisorGPT Demo</title>
+
+    <link rel="shortcut icon" href="./src/aiicon.png" type="image/png">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+<body>
+
+<!-- Hamburger Menu -->
+<button class="hamburger" onclick="toggleSidebar()" title="মেনু"><i class="fa-solid fa-bars"></i></button>
+<div class="overlay" id="overlay" onclick="closeSidebar()">
+
+    <div id="menu" class="fas fa-bars"></div>
+
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <button class="nav-close-btn" aria-label="close menu" onclick="closeSidebar()">
+        <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+    </button>
+
+
+</div>
+
+
+<div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <h2>AdvisorGPT</h2>
+        <hr>
+        <div class="profile">
+            <i class="fa-solid fa-user-circle fa-3x"></i>
+            <p><strong>Shoham</strong></p>
+        </div>
+        <div class="menu">
+            <button><i class="fa-solid fa-comments"></i> চ্যাট ইতিহাস</button>
+            <button><i class="fa-solid fa-file-lines"></i> আইনি নথি</button>
+            <button><i class="fa-solid fa-gavel"></i> আইন গাইড</button>
+            <button><i class="fa-solid fa-tools"></i> সেটিংস</button>
+            <button><i class="fa-solid fa-question-circle"></i> সাহায্য</button>
+            <button><i class="fa-solid fa-door-open"></i> লগআউট</button>
+        </div>
+
+        <!-- New Chat Button (Separate at Bottom) -->
+        <div class="new-chat-container">
+            <button id="new-chat-btn" onclick="startNewChat()"><i class="fa-solid fa-plus"></i> নতুন চ্যাট</button>
+        </div>
+
+    </div>
+
+
+
+    <div class="chat-area" id="chat-area">
+        <div class="chat-box" id="chat-box">
+            <br>
+            <br>
+
+
+<h1><i class="fa-solid fa-file-lines"></i> আইনি নথি</h1>
+
+<!-- Upload New Document -->
+<div class="upload-container">
+    <input type="text" id="doc-title" placeholder="নথির শিরোনাম লিখুন">
+    <input type="url" id="doc-url" accept=".doc,.docx,.pdf,image/*" placeholder="Drive / File URL দিন">
+    <input type="file" id="file-input" accept=".doc,.docx,.pdf,image/*" style="display:none;" onchange="handleFileUpload(event)">
+    <button id="add-doc-btn" onclick="document.getElementById('file-input').click()" ><i class="fa-solid fa-paperclip"></i> Add / Update</button>
+</div>
+
+<div class="doc-container" id="doc-container">
+
+    <!-- Example Document -->
+    <div class="doc-card">
+        <h3>চুক্তিপত্র (Contract)</h3>
+        <div class="doc-preview">
+            <iframe src="./docs/contract.pdf"></iframe>
+        </div>
+        <div class="doc-actions">
+            <a href="./docs/contract.pdf" target="_blank" class="btn-view"><i class="fa-solid fa-eye"></i> View</a>
+            <a href="./docs/contract.pdf" download class="btn-download"><i class="fa-solid fa-download"></i> Download</a>
+        </div>
+    </div>
+    <div class="doc-card">
+        <h3>চুক্তিপত্র (Contract)</h3>
+        <div class="doc-preview">
+            <iframe src="./docs/contract.pdf"></iframe>
+        </div>
+        <div class="doc-actions">
+            <a href="./docs/contract.pdf" target="_blank" class="btn-view"><i class="fa-solid fa-eye"></i> View</a>
+            <a href="./docs/contract.pdf" download class="btn-download"><i class="fa-solid fa-download"></i> Download</a>
+        </div>
+    </div>
+    <div class="doc-card">
+        <h3>চুক্তিপত্র (Contract)</h3>
+        <div class="doc-preview">
+            <iframe src="./docs/contract.pdf"></iframe>
+        </div>
+        <div class="doc-actions">
+            <a href="./docs/contract.pdf" target="_blank" class="btn-view"><i class="fa-solid fa-eye"></i> View</a>
+            <a href="./docs/contract.pdf" download class="btn-download"><i class="fa-solid fa-download"></i> Download</a>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
