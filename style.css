@@ -231,20 +231,20 @@ body {
 ======================== */
 .input-bar {
     display: flex;
-    gap: 0.5em;
+    gap: 1em;
     margin-top: 1em;
 }
 
 .input-bar input {
     flex: 1;
-    padding: 0.8em;
+    padding: 0.9em;
     border-radius: 10px;
     border: 1px solid #ccc;
     font-size: 1em;
 }
 
 .input-bar button {
-    padding: 0.8em 1em;
+    padding: 0.9em 1em;
     border-radius: 10px;
     border: none;
     background-color: #4da6ff;
@@ -627,4 +627,5 @@ body {
 .upload-container {
           text-align: center;
           margin-bottom: 20px;
+
         }
