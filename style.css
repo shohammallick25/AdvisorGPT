@@ -467,9 +467,9 @@ body {
 
 
 
+#
 
-
-#chat-history-list {
+.chat-history-list {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -477,22 +477,22 @@ body {
     overflow-y: auto;
 }
 
-#chat-history-list li {
+.chat-history-list li {
     padding: 8px 12px;
     cursor: pointer;
     border-bottom: 1px solid #ddd;
     font-size: 0.9rem;
 }
 
-#chat-history-list li.user {
+.chat-history-list li.user {
     background-color: #e6f7ff;
 }
 
-#chat-history-list li.ai {
+.chat-history-list li.ai {
     background-color: #fff4e6;
 }
 
-#chat-history-list li:hover {
+.chat-history-list li:hover {
     background-color: #d3e0ff;
 }
 
@@ -504,7 +504,7 @@ body {
     text-align: center;
 }
 
-#new-chat-btn {
+.new-chat-btn {
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -515,12 +515,12 @@ body {
     width: 90%;
 }
 
-#new-chat-btn:hover {
+.new-chat-btn:hover {
     background-color: #45a049;
 }
 
 
-#chat-history-list li {
+.chat-history-list li {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -528,7 +528,7 @@ body {
     border-bottom: 1px solid #ddd;
 }
 
-#chat-history-list li button {
+.chat-history-list li button {
     margin-left: 5px;
     border: none;
     background: none;
@@ -629,3 +629,4 @@ body {
           margin-bottom: 20px;
 
         }
+
