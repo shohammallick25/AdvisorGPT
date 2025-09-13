@@ -2572,6 +2572,23 @@ const lawDatabase = [
     // Add more entries here as needed
 ];
 
+function sendMessage() {
+    const input = document.getElementById('user-input');
+    const text = input.value.trim();
+    if (!text) return;
+
+    // Example message append
+    const chatBox = document.getElementById('chat-box');
+    const div = document.createElement('div');
+    div.className = 'message user';
+    div.innerHTML = `<div><strong>You:</strong><br>${text}</div>`;
+    chatBox.appendChild(div);
+
+    input.value = '';
+    scrollToBottom(); // ✅ Auto scroll
+}
+
+
 // Send message with lawyer-style response
 function sendMessage() {
     const inputEl = document.getElementById('user-input');
@@ -2579,6 +2596,7 @@ function sendMessage() {
     const userText = inputEl.value.trim();
     if (!userText) return;
     inputEl.value = '';
+    scrollToBottom();
 
     // Append user message
     const userMsg = document.createElement('div');
@@ -2713,3 +2731,4 @@ addBtn.addEventListener('click', () => {
       document.getElementById('doc-title').value = '';
       document.getElementById('doc-url').value = '';
     });
+
